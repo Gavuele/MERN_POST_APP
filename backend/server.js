@@ -14,6 +14,9 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
+app.get('/', (req, res) => {
+    res.send('Welcome to the backend server!');
+});
 
 // Error handling middleware
 app.use(errorMiddleware);
